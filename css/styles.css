@@ -51,6 +51,7 @@ body {
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
+
 .logo-web {
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -61,6 +62,7 @@ body {
   font-size: 18px;
   line-height: 1.33;
 }
+
 .logo-studio {
   font-family: var(--logo-font);
   font-weight: 800;
@@ -98,6 +100,9 @@ body {
 .navigation-link:hover {
   color: var(--btn-text-color);
 }
+.navigation-link:focus {
+  color: var(--btn-text-color);
+}
 address {
   margin-left: auto;
 }
@@ -109,10 +114,12 @@ address {
 .contacts-link {
   line-height: 1.5;
   letter-spacing: 0.02em;
-
   color: var(--text-color);
 }
 .contacts-link:hover {
+  color: var(--btn-text-color);
+}
+.contacts-link:focus {
   color: var(--btn-text-color);
 }
 
@@ -123,10 +130,11 @@ address {
       rgba(46, 47, 66, 0.7)
     ),
     url("../images/peopleoffice.jpg");
+  max-width: 1440px;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 188px 0;
-  margin: 0px;
+  margin: 0 auto;
 }
 .hero-title {
   font-weight: 700;
@@ -160,6 +168,12 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+.hero-button:focus {
+  background: var(--second-btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 /*-----------Strengths--------------*/
 .section-strengths {
   padding-top: 120px;
@@ -171,14 +185,19 @@ address {
 }
 .strengths-icon {
   box-sizing: border-box;
-  width: 264px;
-  height: 112px;
-  padding: 24px 100px;
+  border-width: 264px 112px;
+
   background: var(--btn-bg-color);
   border-radius: 4px;
 }
-.strengths {
+
+.strengths-icon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 264px;
+  height: 112px;
+  background-color: var(--btn-bg-color);
 }
 .strengths-title {
   font-weight: 500;
@@ -271,16 +290,24 @@ img {
 .icon-list-link:hover {
   background-color: var(--second-btn-color);
 }
+.icon-list-link:focus {
+  background-color: var(--second-btn-color);
+}
 /* ------------customers----------- */
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
 .customers-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
-  margin-top: 130px;
   margin-bottom: 72px;
 }
+
 .customers-icon-list {
   display: flex;
   justify-content: center;
@@ -295,17 +322,21 @@ img {
   height: 88px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  margin-bottom: 120px;
 }
-.customers-list-link:hover {
+
+.customers-list-link:hover,
+.customers-list-link:focus {
   border: 1px solid var(--second-btn-color);
-  border-radius: 4px;
+  border-radius: 4psx;
 }
+
 .customers-icon {
   fill: #8e8f99;
 }
-.customers-icon:hover {
-  fill: #404bbf;
+
+.customers-list-link:focus .customers-icon,
+.customers-list-link:hover .customers-icon {
+  fill: var(--second-btn-color);
 }
 
 /* -----------FOOTER------------- */
@@ -313,13 +344,14 @@ img {
   background: var(--color-tx-ourworkers);
   padding-top: 100px;
   padding-bottom: 100px;
-  padding-left: 156px;
+  margin: 0 auto;
 }
 .footer-list {
   display: flex;
-  justify-content: baseline;
-  align-items: center;
-  gap: 120px;
+  align-items: baseline;
+}
+.footer-box-logo {
+  margin-left: 156px;
 }
 .logo-studio-footer {
   font-family: var(--logo-font);
@@ -338,20 +370,19 @@ img {
   width: 264px;
   margin-top: 16px;
 }
-/* ----------social-medial-------- */
-.social-medial {
-  display: flex;
-  justify-content: flex-start;
+/* ----------social-media-------- */
+.social-media {
+  margin-left: 120px;
 }
-.social-medial-title {
+.social-media-title {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--text-color-hero);
 }
 .social-icon-list {
   display: flex;
-  gap: 24px;
-  padding-top: 24px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 .social-list-link {
@@ -363,7 +394,8 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 }
-.social-list-link:hover {
+.social-list-link:hover,
+.social-list-link:focus {
   background-color: #31d0aa;
 }
 .social-icon {
@@ -398,7 +430,8 @@ img {
   color: var(--btn-text-color);
 }
 
-.button-icon:hover {
+.button-icon:hover,
+.button-icon:focus {
   background: var(--second-btn-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -440,7 +473,8 @@ img {
   letter-spacing: 0.02em;
   color: var(--color-tx-ourworkers);
 }
-.cards-item:hover {
+.cards-item:hover,
+.cards-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
