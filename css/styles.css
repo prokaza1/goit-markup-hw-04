@@ -203,6 +203,7 @@ address {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+  margin-top: 8px;
   margin-bottom: 8px;
   letter-spacing: 0.02em;
   color: var(--color-tx-ourworkers);
@@ -350,9 +351,7 @@ img {
   display: flex;
   align-items: baseline;
 }
-.footer-box-logo {
-  margin-left: 156px;
-}
+
 .logo-studio-footer {
   font-family: var(--logo-font);
   font-weight: 800;
